@@ -1,5 +1,7 @@
 # Broken labels in RISC-V ELF from GCC
 
+*Solved, sorta, but still, wtf*
+
 ## Problem
 
 When compiling an assembly source file into an ELF executable using
@@ -91,3 +93,11 @@ SYMBOL TABLE:
 0000000080001042 g       .text  0000000000000000 _edata
 0000000080000042 g       .text  0000000000000000 _end
 ```
+
+# Solution
+
+I needed to add `-c` to the GCC compile line; otherwise GCC tries to
+do a final link.
+
+Shouldn't it have puked when I tried to re-link an already linked
+file? At least, shouldn't it have not screwed up the symbol values?
