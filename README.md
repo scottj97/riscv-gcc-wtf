@@ -101,3 +101,5 @@ do a final link.
 
 Shouldn't it have puked when I tried to re-link an already linked
 file? At least, shouldn't it have not screwed up the symbol values?
+
+[Discussion](https://groups.google.com/a/groups.riscv.org/forum/#!msg/sw-dev/bxZ4smy_bGA/OdtsnfWpBwAJ)
